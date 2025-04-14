@@ -1,4 +1,4 @@
-# 🎭 Situasi Tamu Generator
+# 🎭 Random Guest Act Generator
 
 *Welcome to the drama club — where every tap serves up a fresh scenario.*
 
