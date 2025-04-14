@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Situasi Acak</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f0f4f8;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .situation {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>🎲 Situasi Acak</h2>
+        <div class="situation" id="indo">Klik tombol untuk mulai!</div>
+        <div class="situation" id="eng"></div>
+        <button onclick="generateRandom()">Tampilkan Situasi</button>
+    </div>
+
+    <script>
+        const situation = [
+            { id: 1, indo: "Tamu datang tergesa-gesa karena hujan.", eng: "The guest arrived in a hurry because of the rain." },
+            { id: 2, indo: "Tamu pertama kali ke Indonesia.", eng: "The guest is visiting Indonesia for the first time." },
+            { id: 3, indo: "Tamu datang dengan anak kecil yang menangis.", eng: "The guest arrived with a crying child." },
+            { id: 4, indo: "Tamu datang sambil menelpon.", eng: "The guest arrived while talking on the phone." },
+            { id: 5, indo: "Tamu kelihatan bingung di depan pintu.", eng: "The guest looked confused at the entrance." },
+            { id: 6, indo: "Tamu membawa banyak koper.", eng: "The guest brought a lot of luggage." },
+            { id: 7, indo: "Tamu memakai headphone.", eng: "The guest was wearing headphones." },
+            { id: 8, indo: "Tamu langsung membuka ponsel tanpa menyapa.", eng: "The guest immediately checked their phone without greeting." },
+            { id: 9, indo: "Tamu datang bareng teman tapi tidak bicara.", eng: "The guest came with a friend but didn’t speak." },
+            { id: 10, indo: "Tamu terlihat lelah dan baru bangun tidur.", eng: "The guest looked tired and just woke up." },
+            { id: 11, indo: "Tamu tersenyum tapi tidak bicara.", eng: "The guest smiled but didn’t say anything." },
+            { id: 12, indo: "Tamu datang pakai seragam kantor.", eng: "The guest came wearing office uniform." },
+            { id: 13, indo: "Tamu terlihat panik mencari dompet.", eng: "The guest looked panicked while searching for their wallet." },
+            { id: 14, indo: "Tamu mengira kamu tamu juga.", eng: "The guest thought you were a guest too." },
+            { id: 15, indo: "Tamu bawa makanan dan nanya boleh makan di lounge.", eng: "The guest brought food and asked if they could eat in the lounge." },
+            { id: 16, indo: "Tamu langsung duduk tanpa menyapa.", eng: "The guest sat down without saying hello." },
+            { id: 17, indo: "Tamu datang saat kamu sedang bersih-bersih.", eng: "The guest arrived while you were cleaning." },
+            { id: 18, indo: "Tamu menunjukkan email reservasi sambil bertanya.", eng: "The guest showed a reservation email while asking something." },
+            { id: 19, indo: "Tamu kelihatan tidak tahu harus ke mana.", eng: "The guest seemed unsure where to go." },
+            { id: 20, indo: "Tamu datang dengan ekspresi kesal.", eng: "The guest arrived with an annoyed expression." },
+            { id: 21, indo: "Tamu tidak bisa bahasa Inggris dengan lancar.", eng: "The guest couldn’t speak English fluently." },
+            { id: 22, indo: "Tamu menanyakan teman yang sudah lebih dulu check-in.", eng: "The guest asked about a friend who had checked in earlier." },
+            { id: 23, indo: "Tamu terlihat terburu-buru dan langsung menunjuk aplikasi.", eng: "The guest looked in a rush and immediately pointed to an app." },
+            { id: 24, indo: "Tamu datang membawa anjing kecil.", eng: "The guest arrived with a small dog." },
+            { id: 25, indo: "Tamu bertanya apakah ini Bobobox (seolah belum yakin).", eng: "The guest asked if this was Bobobox (as if unsure)." }
+        ];
+
+        function generateRandom() {
+            const randomIndex = Math.floor(Math.random() * situation.length);
+            const randomSituation = situation[randomIndex];
+            document.getElementById("indo").innerText = randomSituation.indo;
+            document.getElementById("eng").innerText = randomSituation.eng;
+        }
+    </script>
+
+</body>
+
+</html>
